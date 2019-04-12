@@ -7,28 +7,6 @@
             Portfolio
           </nuxt-link>
         </li>
-        <ul>
-          <li>
-            <nuxt-link to="/portfolio/speaking-teaching">
-              Speaking & Teaching
-            </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/portfolio/design">
-              Design
-            </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/portfolio/writing">
-              Writing
-            </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/portfolio/photography">
-              Photography
-            </nuxt-link>
-          </li>
-        </ul>
         <li>
           <nuxt-link exact to="/blog">
             Blog
