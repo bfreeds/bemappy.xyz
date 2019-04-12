@@ -1,6 +1,7 @@
 // layout
 <template>
   <div id="container">
+    <Logo class="logo" />
     <Header class="header" />
     <Sidebar class="sidebar" />
     <nuxt class="content" />
@@ -9,12 +10,14 @@
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue'
 import Header from '../components/Header.vue'
 import Sidebar from '~/components/Sidebar.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
   components: {
+    Logo,
     Header,
     Sidebar,
     Footer
@@ -23,24 +26,25 @@ export default {
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* grid container for the whole page */
 #container {
   display: grid;
   grid-template-columns: 200px 3fr 1fr;
   grid-template-rows: 1fr auto 1fr;
   grid-template-areas:
-    '. head head'
+    'logo head head'
     'side main .'
-    'side foot foot';
+    'foot foot foot';
   grid-gap: 1rem;
 }
 
 /* universal header */
+.logo {
+  grid-area: logo;
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 100px;
+}
 .header {
   grid-area: head;
   margin: 1rem;
