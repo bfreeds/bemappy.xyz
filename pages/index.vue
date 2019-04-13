@@ -13,6 +13,16 @@
 </template>
 
 <script>
+import axios from 'axios'
+export default {
+  // fetch method
+  fetch({ store, params }) {
+    return axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
+      // add posts to global store
+      store.commit('setPosts', res.data)
+    })
+  }
+}
 </script>
 
 <style>
