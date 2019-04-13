@@ -16,11 +16,13 @@
 import axios from 'axios'
 export default {
   // fetch method
-  fetch({ store, params }) {
-    return axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
-      // add posts to global store
-      store.commit('setPosts', res.data)
-    })
+  async fetch({ store, params }) {
+    // destructure to pull data object out of response
+    const { data } = await axios.get(
+      'https://jsonplaceholder.typicode.com/posts'
+    )
+    // add posts to global store
+    store.commit('setPosts', data)
   }
 }
 </script>
