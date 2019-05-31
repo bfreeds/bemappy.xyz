@@ -1,71 +1,81 @@
-// layout
+// default layout
 <template>
-  <div id="container">
-    <Logo class="logo" />
+  <div class="wrapper">
     <Header class="header" />
-    <Sidebar class="sidebar" />
-    <nuxt class="content" />
+    <HeroImage class="hero" />
+    <Nav class="nav" />
+    <article>
+      <nuxt class="content" />
+    </article>
     <Footer class="footer" />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import Header from '../components/Header.vue'
-import Sidebar from '~/components/Sidebar.vue'
+import HeroImage from '../components/HeroImage.vue'
+import Nav from '~/components/Nav.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
   components: {
-    Logo,
     Header,
-    Sidebar,
+    HeroImage,
+    Nav,
     Footer
   }
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 /* grid container for the whole page */
-#container {
+.wrapper {
+  width: 100%;
   display: grid;
-  grid-template-columns: 200px 3fr 1fr;
-  grid-template-rows: 1fr auto 1fr;
+  grid-gap: 20px;
   grid-template-areas:
-    'logo head head'
-    'side main .'
-    'foot foot foot';
-  grid-gap: 1rem;
+    'header'
+    'hero'
+    'nuxt'
+    'nav'
+    'footer';
 }
 
-/* universal header */
-.logo {
-  grid-area: logo;
-  border: 1px solid red;
-  margin: 0 auto;
-  width: 100px;
-}
 .header {
-  grid-area: head;
-  margin: 1rem;
-  background: blue;
+  grid-area: header;
 }
-
-/* sidebar for medium-large viewports */
-/* TODO: make responsive */
-.sidebar {
-  grid-area: side;
-  border: 1px solid black;
+.hero {
+  grid-area: hero;
+  position: sticky;
+  top: -100px;
+}
+.nav {
+  grid-area: nav;
 }
 
 /* whichever vue page component is rendered */
-.content {
-  grid-area: main;
+article {
+  grid-area: nuxt;
   width: 100%;
+  margin: 0 auto;
 }
 
 /* universal footer */
 .footer {
-  grid-area: foot;
+  grid-area: footer;
+  width: 100%;
+}
+
+/* for viewports large enough for two columns */
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      'header  header'
+      'hero    hero'
+      'nav     nuxt'
+      'nav nuxt'
+      'footer  footer';
+  }
 }
 </style>

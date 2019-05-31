@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
   ** Headers of the page
@@ -16,6 +16,11 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
+  /* Dynamically generate routes for blog posts */
+  generate: {
+    routes: ['/posts/1']
+  },
+
   /*
   ** Customize the progress-bar color
   */
@@ -24,7 +29,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['@assets/main.scss'],
+  css: ['~assets/main.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -34,7 +39,10 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources'],
+  styleResources: {
+    scss: ['~assets/style/_variables.scss']
+  },
 
   /*
   ** Build configuration
