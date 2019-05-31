@@ -1,5 +1,5 @@
 <template>
-  <section class="sidebar">
+  <div class="nav">
     <nav>
       <ul>
         <li>
@@ -20,7 +20,7 @@
       </ul>
     </nav>
     <SocialMedia class="social-media" />
-  </section>
+  </div>
 </template>
 
 <script>
@@ -34,15 +34,12 @@ export default {
 </script>
 
 <style scoped>
-.sidebar {
+.nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 ul li {
   list-style: none;
-}
-
-.social-media {
 }
 </style>
