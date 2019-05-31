@@ -2,65 +2,31 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="title">
-        Brandyn Friedly
-      </h1>
-      <h2 class="subtitle">
+      <h2 class="summary">
         My personal website, blog, and portfolio.
       </h2>
+      <section class="personal-statement">
+        <p>this is where i would put a statement about what i do and what i'm about</p>
+      </section>
     </div>
   </section>
 </template>
 
 <script>
-// import axios from 'axios'
-
-// export default {
-//   // hydrate global store with blog post data
-
-//   // fetch method, destructure "store" and "params" from Nuxt "Context" object
-//   async fetch({ store, params }) {
-//     // destructure to pull data object out of response
-//     const { data } = await axios.get(
-//       'https://jsonplaceholder.typicode.com/posts'
-//     )
-//     // add posts to global store
-//     store.commit('setPosts', data)
-//   }
-// }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
-
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-.title {
-  font-family: 'Crimson Text', serif;
-  display: block;
+.summary {
   font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-family: 'Crimson Text', serif;
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-size: 4rem;
+  color: $gray5;
   word-spacing: 5px;
   padding-bottom: 15px;
-}
-
-.links {
-  font-family: 'Crimson Text', serif;
-  padding-top: 15px;
 }
 </style>

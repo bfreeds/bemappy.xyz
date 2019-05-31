@@ -13,7 +13,10 @@ $primary-font: 'Crimson Text', sans-serif;
   box-sizing: border-box;
 }
 
-div {
-  background: $gray1;
-  border: 1px solid $gray2;
+a {
+  text-decoration: none;
 }
+// div {
+//   background: $gray1;
+//   border: 1px solid $gray2;
+// }

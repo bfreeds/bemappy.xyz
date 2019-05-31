@@ -1,8 +1,11 @@
 <template>
-  <header>
-    <Logo class="logo" />
+  <header>  
     <h1 class="title">
       Brandyn Friedly
+    </h1>
+    <Logo class="logo" />
+    <h1 class="title">
+      BeMappy.xyz
     </h1>
   </header>
 </template>
@@ -18,26 +21,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import '~assets/style/variables.scss';
-
 header {
   width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
+  align-content: center;
+  justify-content: space-around;
 }
 
 .title {
-  border: 1px solid red;
-  color: gray;
+  color: $gray6;
+  font-size: 2.2rem;
+  word-spacing: 0.7rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
   font-variant: small-caps;
-  font-size: 1.5rem;
-  word-spacing: 0.3rem;
-  letter-spacing: 0.3rem;
-  font-weight: 200;
+
+  align-self: center;
 }
 
 .logo {
-  width: 40px;
+  width: 80px;
+  float: left;
 }
 </style>

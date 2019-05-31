@@ -1,14 +1,19 @@
 // blog home page
 <template>
   <section class="container">
-    <div>
-      <h1>Mappenings 'n things.</h1>
-      <h3>Writing, design, code, etc.</h3>
+    <header class="blog-header">
+      <h1 class="title">
+        mappenings 'n things
+      </h1>
+      <h3 class="subtitle">
+        writing, code, cartography, etc.
+      </h3>
+    </header>
     </div>
     <ul>
       <li v-for="(post, index) in posts" :key="index" class="link">
-        <NuxtLink :to="post.id">
-          {{ post.title + post.id }}
+        <NuxtLink :to="$route.path + '/' + post.id.toString()">
+          {{ post.title }}
         </NuxtLink>
       </li>
     </ul>
@@ -28,13 +33,26 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+}
+
+.blog-header {
+  color: $gray5;
+}
+.title {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+.subtitle {
+  font-weight: 100;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .link {

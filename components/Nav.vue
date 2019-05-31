@@ -19,22 +19,12 @@
         </li>
       </ul>
     </nav>
-    <SocialMedia class="social-media" />
   </div>
 </template>
 
-<script>
-import SocialMedia from '~/components/SocialMedia.vue'
-
-export default {
-  components: {
-    SocialMedia
-  }
-}
-</script>
-
 <style scoped>
 .nav {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
