@@ -1,5 +1,6 @@
+import axios from 'axios'
+
 // default Vuex store
-// mounted to root by Nuxt
 
 // function that returns object to avoid shared state
 const state = () => ({
@@ -12,6 +13,13 @@ const mutations = {
   }
 }
 
-const actions = {}
+const actions = {
+  async nuxtServerInit({ commit }) {
+    const { data } = await axios.get(
+      'https://jsonplaceholder.typicode.com/posts'
+    )
+    commit('setPosts', data)
+  }
+}
 
 export { state, mutations, actions }
