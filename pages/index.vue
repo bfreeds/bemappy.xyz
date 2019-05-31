@@ -1,4 +1,4 @@
-// page
+// home page
 <template>
   <section class="container">
     <div>
@@ -13,18 +13,21 @@
 </template>
 
 <script>
-import axios from 'axios'
-export default {
-  // fetch method
-  async fetch({ store, params }) {
-    // destructure to pull data object out of response
-    const { data } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
-    // add posts to global store
-    store.commit('setPosts', data)
-  }
-}
+// import axios from 'axios'
+
+// export default {
+//   // hydrate global store with blog post data
+
+//   // fetch method, destructure "store" and "params" from Nuxt "Context" object
+//   async fetch({ store, params }) {
+//     // destructure to pull data object out of response
+//     const { data } = await axios.get(
+//       'https://jsonplaceholder.typicode.com/posts'
+//     )
+//     // add posts to global store
+//     store.commit('setPosts', data)
+//   }
+// }
 </script>
 
 <style>

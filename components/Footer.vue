@@ -6,4 +6,9 @@
 </template>
 
 <style scoped>
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+}
 </style>
