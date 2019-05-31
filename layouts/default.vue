@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 /* grid container for the whole page */
 .wrapper {
   width: 100%;
@@ -43,15 +43,11 @@ export default {
 
 .header {
   grid-area: header;
-  position: sticky;
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.7);
-  top: 0;
 }
 .hero {
   grid-area: hero;
   position: sticky;
-  top: -1;
+  top: -100px;
 }
 .nav {
   grid-area: nav;

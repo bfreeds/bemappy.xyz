@@ -4,7 +4,7 @@
       Brandyn Friedly
     </h1>
     <Logo class="logo" />
-    <h1 class="title">
+    <h1 class="sitename">
       BeMappy.xyz
     </h1>
   </header>
@@ -22,20 +22,26 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  height: 100px;
+  position: sticky;
+  top: 0;
+  padding-bottom: 20px;
+  z-index: 10;
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
+  background-color: transparentize($jade, 0.6);
 }
 
-.title {
-  color: $gray6;
+h1 {
+  color: $gray0;
   font-size: 2.2rem;
   word-spacing: 0.7rem;
   letter-spacing: 0.2rem;
-  font-weight: 400;
+  font-weight: 800;
   font-variant: small-caps;
 
   align-self: center;
