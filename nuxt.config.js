@@ -1,7 +1,8 @@
+const axios = require('axios')
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
   ** Headers of the page
@@ -14,6 +15,11 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
+
+  /* Dynamically generate routes for blog posts */
+  generate: {
+    routes: ['/posts/1']
   },
 
   /*
