@@ -1,4 +1,3 @@
-const axios = require('axios')
 const pkg = require('./package')
 
 module.exports = {
@@ -30,7 +29,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['@assets/main.scss'],
+  css: ['~assets/main.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -40,7 +39,10 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources'],
+  styleResources: {
+    scss: ['~assets/style/_variables.scss']
+  },
 
   /*
   ** Build configuration

@@ -1,5 +1,10 @@
+@import "style/variables";
 
-@import 'style/variables';
+// typography
+// note:  had to move this from _variables because of a strange webpack loader issue when importing from that file
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
+
+$primary-font: 'Crimson Text', sans-serif;
 
 * {
   margin: 0;
