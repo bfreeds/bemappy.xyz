@@ -1,11 +1,11 @@
 <template>
   <header>  
-    <h1 class="title">
-      Brandyn Friedly
-    </h1>
-    <Logo class="logo" />
     <h1 class="sitename">
       BeMappy.xyz
+    </h1>  
+    <Logo class="logo" />
+    <h1 class="title">
+      Brandyn Friedly
     </h1>
   </header>
 </template>
@@ -33,11 +33,11 @@ header {
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
-  background-color: transparentize($jade, 0.6);
+  background-color: transparentize($gray0, 0.6);
 }
 
 h1 {
-  color: $gray0;
+  color: $gray7;
   font-size: 2.2rem;
   word-spacing: 0.7rem;
   letter-spacing: 0.2rem;

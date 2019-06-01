@@ -3,18 +3,8 @@
     <nav>
       <ul>
         <li>
-          <nuxt-link exact to="/portfolio">
-            Portfolio
-          </nuxt-link>
-        </li>
-        <li>
           <nuxt-link exact to="/blog">
             Blog
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link exact to="/contact">
-            Contact
           </nuxt-link>
         </li>
       </ul>
@@ -24,7 +14,9 @@
 
 <style scoped>
 .nav {
-  padding: 10px;
+  font-size: 1.4rem;
+  padding-top: 10px;
+  padding-left: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
