@@ -39,9 +39,14 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources', '@nuxtjs/markdownit'],
   styleResources: {
     scss: ['~assets/style/_variables.scss']
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true
   },
 
   /*
