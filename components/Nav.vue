@@ -3,6 +3,11 @@
     <nav>
       <ul>
         <li>
+          <nuxt-link exact to="/portfolio">
+            Portfolio
+          </nuxt-link>
+        </li>
+        <li>
           <nuxt-link exact to="/blog">
             Blog
           </nuxt-link>
