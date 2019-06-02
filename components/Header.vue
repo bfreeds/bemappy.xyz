@@ -1,11 +1,11 @@
 <template>
   <header>  
     <h1 class="sitename">
-      BeMappy.xyz
+      beMappy.xyz
     </h1>  
     <Logo class="logo" />
     <h1 class="title">
-      Brandyn Friedly
+      brandyn friedly
     </h1>
   </header>
 </template>
@@ -22,10 +22,10 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  height: 100px;
+  min-height: 80px;
   position: sticky;
   top: 0;
-  padding-bottom: 20px;
+  padding: 15px 0 15px 20px;
   z-index: 10;
   width: 100%;
   text-align: center;
@@ -33,16 +33,22 @@ header {
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
-  background-color: transparentize($gray0, 0.6);
+  // gradient background to balance hero image when aligned
+  // TODO: Animate the gradient & image blur on alignment
+  background-image: linear-gradient(
+    to right,
+    transparentize($gray4, 0.5),
+    transparentize($gray0, 0.5)
+  );
 }
 
 h1 {
   color: $gray7;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   word-spacing: 0.7rem;
   letter-spacing: 0.2rem;
   font-weight: 800;
-  font-variant: small-caps;
+  // font-variant: small-caps;
 
   align-self: center;
 }
