@@ -5,20 +5,15 @@
 <Avatar class='photo' />
 
 
-# Welcome Message
-# Who Am I
-I'm Brandyn, a geographer who does web development and design with a ❤️ for maps and community. 
+# Welcome!
+I'm Brandyn, a geographer who does full stack web development and design with a ❤️ for community and mapping.  
 
-# What Do I Do
+I also teach, <a target="_blank" rel="noopener noreferrer" href="https://bfreeds.github.io/foss4gna-2018-devops/">speak</a>, and write (portfolio forthcoming on this site-in-progress).
 
-# Get In Touch
+# Get in Touch =>
+I'm currently on the lookout for my next opportunity (especially in journalism, digital humanities, civic technology, or similar mission-driven projects.  
 
-# This Page Should:  
-1.  Hook someone into learning more
-1.  Call to action to say hi
-1.  Draw people to read the blog
-1.  Draw people to look at the portfolio  
-
+If you'd like to discuss working together, or just say "hi", I'd love to hear from you.  You can reach me [here](mailto:bfriedly@bemappy.xyz).
 </div>
 </template>
 
