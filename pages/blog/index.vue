@@ -43,6 +43,8 @@ export default {
 }
 
 .blog-header {
+  margin: 0 auto;
+  padding-bottom: 15px;
   color: $gray5;
 }
 .title {
