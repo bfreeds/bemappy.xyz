@@ -28,7 +28,7 @@ export default {
     }
   },
   async fetch({ store, params }) {
-    await store.dispatch('setPosts', params.slug)
+    await store.dispatch('setPosts')
   }
 }
 </script>
