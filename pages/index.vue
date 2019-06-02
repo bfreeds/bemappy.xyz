@@ -10,10 +10,12 @@ I'm Brandyn, a geographer who does full stack web development and design with a 
 
 I also teach, <a target="_blank" rel="noopener noreferrer" href="https://bfreeds.github.io/foss4gna-2018-devops/">speak</a>, and write (portfolio forthcoming on this site-in-progress).
 
-# Get in Touch =>
-I'm currently on the lookout for my next opportunity (especially in journalism, digital humanities, civic technology, or similar mission-driven projects.  
+# Get in Touch 👋
+I'm currently seeking my next opportunity to work with a team.  
 
-If you'd like to discuss working together, or just say "hi", I'd love to hear from you.  You can reach me [here](mailto:bfriedly@bemappy.xyz).
+I'm especially interested in projects in journalism, digital humanities, civic technology, or a similar field that creatively applies software for the common good.
+
+If you'd like to discuss working together, or just say "hi", I would love to hear from you.  You can reach me [here](mailto:bfriedly@bemappy.xyz).
 </div>
 </template>
 
