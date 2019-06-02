@@ -14,6 +14,8 @@ img {
   position: relative;
   max-width: 100%;
   border: 1px solid $gray1;
+  // TODO: BLUR ANIMATE ON HEADER ALIGNMENT
+  // filter: blur(1px);
 }
 .top,
 .bottom {
