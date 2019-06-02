@@ -1,6 +1,7 @@
 <template>
   <article class="post-wrapper">
     <header class="post-header">
+      <img src="~assets/photos/sewer_reflection.jpg" alt="example lead art" class="lead-art">
       <h3 class="series-title">
         Teaching Data Literacy
       </h3>
@@ -50,6 +51,11 @@ article {
   padding: 10px;
 }
 
+.lead-art {
+  max-width: 100%;
+  max-height: 50vh;
+  border: 1px solid $gray2;
+}
 .series-title {
   color: $gray0;
   background-color: $gray3;
@@ -73,10 +79,5 @@ article {
   font-weight: 100;
   color: $gray2;
   float: right;
-}
-
-p {
-  font-size: 1.2rem;
-  padding-bottom: 1.4rem;
 }
 </style>
