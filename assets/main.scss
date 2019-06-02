@@ -13,10 +13,19 @@ $primary-font: 'Crimson Text', sans-serif;
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
+// Base Styles for Elements
+h1, h2, h3, h4, h5, h6 {
+  color: $gray4;
 }
-// div {
-//   background: $gray1;
-//   border: 1px solid $gray2;
-// }
+
+a {
+  font-variant: small-caps;
+  text-decoration: none;
+  color: $accent;
+}
+
+p {
+  font-size: 1.2rem; // at least 16px for readability
+  line-height: 1.6rem;
+  padding-bottom: 2rem;
+}
