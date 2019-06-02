@@ -30,7 +30,6 @@ export default {
 <style lang='scss' scoped>
 /* grid container for the whole page */
 .wrapper {
-  width: 100%;
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
@@ -58,6 +57,7 @@ article {
   grid-area: nuxt;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* universal footer */
@@ -73,8 +73,8 @@ article {
     grid-template-areas:
       'header  header'
       'hero    hero'
-      'nav     nuxt'
-      'nav nuxt'
+      'nav   nuxt'
+      'nav      nuxt'
       'footer  footer';
   }
 }
