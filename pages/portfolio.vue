@@ -9,7 +9,8 @@
         v-for="(project, index) in projects" 
         :key="index"
         :name="project.fields.name"
-        :type="project.fields.type"
+        :type="project.fields.type" 
+        :photo="project.fields.photo"
         :description="project.fields.description"
         :organization="project.fields.organization"
         :project-url="project.fields.projectUrl"
@@ -43,10 +44,10 @@ export default {
 <style>
 .container {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+}
+
+article {
+  width: 100%;
 }
 
 .links {

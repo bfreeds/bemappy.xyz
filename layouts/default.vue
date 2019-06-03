@@ -4,9 +4,7 @@
     <Header class="header" />
     <HeroImage class="hero" />
     <Nav class="nav" />
-    <article>
-      <nuxt class="content" />
-    </article>
+    <nuxt class="content" />
     <Footer class="footer" />
   </div>
 </template>
@@ -53,7 +51,7 @@ export default {
 }
 
 /* whichever vue page component is rendered */
-article {
+.content {
   grid-area: nuxt;
   width: 100%;
   margin: 0 auto;
