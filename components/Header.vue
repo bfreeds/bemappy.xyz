@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  min-height: 80px;
+  height: 80px;
   position: sticky;
   top: 0;
   padding: 15px 0 15px 20px;
@@ -44,7 +44,7 @@ header {
 
 h1 {
   color: $gray7;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   word-spacing: 0.7rem;
   letter-spacing: 0.2rem;
   font-weight: 800;
@@ -54,7 +54,13 @@ h1 {
 }
 
 .logo {
-  width: 80px;
-  float: left;
+  height: 80px;
+  align-self: flex-start;
+}
+
+@media (min-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+  }
 }
 </style>

@@ -1,8 +1,8 @@
-// portfolio page
+// work page
 <template>
   <section class="container">
     <h1 class="title">
-      Portfolio
+      Work
     </h1>
     <article v-if="projects">
       <ul class="content-list">
@@ -19,17 +19,6 @@
           />
         </li>
       </ul>
-      <!-- <ProjectCard 
-        v-for="(project, index) in projects" 
-        :key="index"
-        :name="project.fields.name"
-        :type="project.fields.type" 
-        :photo="project.fields.photo"
-        :description="project.fields.description"
-        :organization="project.fields.organization"
-        :project-url="project.fields.projectUrl"
-        :github-url="project.fields.githubUrl"
-      /> -->
     </article>
   </section>
 </template>

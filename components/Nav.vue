@@ -3,13 +3,18 @@
     <nav>
       <ul>
         <li>
-          <nuxt-link exact to="/portfolio">
-            Portfolio
+          <nuxt-link exact to="/work">
+            Work
           </nuxt-link>
         </li>
         <li>
           <nuxt-link exact to="/blog">
             Blog
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link exact to="/about">
+            About
           </nuxt-link>
         </li>
       </ul>
