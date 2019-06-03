@@ -5,7 +5,21 @@
       Portfolio
     </h1>
     <article v-if="projects">
-      <ProjectCard 
+      <ul class="content-list">
+        <li v-for="(project, index) in projects" :key="index">
+          <ProjectCard  
+            :key="index"
+            :name="project.fields.name"
+            :type="project.fields.type" 
+            :photo="project.fields.photo"
+            :description="project.fields.description"
+            :organization="project.fields.organization"
+            :project-url="project.fields.projectUrl"
+            :github-url="project.fields.githubUrl"
+          />
+        </li>
+      </ul>
+      <!-- <ProjectCard 
         v-for="(project, index) in projects" 
         :key="index"
         :name="project.fields.name"
@@ -15,7 +29,7 @@
         :organization="project.fields.organization"
         :project-url="project.fields.projectUrl"
         :github-url="project.fields.githubUrl"
-      />
+      /> -->
     </article>
   </section>
 </template>
@@ -50,7 +64,13 @@ article {
   width: 100%;
 }
 
-.links {
-  padding-top: 15px;
+.content-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  /* pattern learned from Rachel Andrews */
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-gap: 2rem;
 }
 </style>

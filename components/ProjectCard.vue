@@ -70,7 +70,8 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  width: 300px;
+  width: 100%;
+  background-color: transparentize($gray2, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,7 +83,7 @@ export default {
 
 .card-lead {
   width: 100%;
-  background-color: $gray5;
+  background-color: $gray4;
 }
 
 .card-footer {
