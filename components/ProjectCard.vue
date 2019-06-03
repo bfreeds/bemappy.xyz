@@ -46,7 +46,7 @@ export default {
     // eslint-disable-next-line vue/require-default-prop
     githubUrl: { type: String },
     // eslint-disable-next-line vue/require-default-prop
-    photo: { type: String },
+    photo: { type: [String, Object] },
     // eslint-disable-next-line vue/require-default-prop
     startDate: { type: String },
     // eslint-disable-next-line vue/require-default-prop
