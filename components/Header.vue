@@ -1,5 +1,5 @@
 <template>
-  <header>  
+  <header :class="{fixed: isHeroScrolled}">  
     <h1 class="sitename">
       beMappy.xyz
     </h1>  
@@ -16,6 +16,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  computed: {
+    isHeroScrolled() {
+      return this.$store.state.ui.isHeroScrolled
+    }
   }
 }
 </script>
@@ -33,13 +38,13 @@ header {
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
+  transition: background-color 1s ease-in;
+}
+
+.fixed {
   // gradient background to balance hero image when aligned
   // TODO: Animate the gradient & image blur on alignment
-  background-image: linear-gradient(
-    to right,
-    transparentize($gray4, 0.5),
-    transparentize($gray0, 0.5)
-  );
+  background-color: transparentize($gray2, 0.6);
 }
 
 h1 {

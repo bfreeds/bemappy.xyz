@@ -7,7 +7,12 @@ import client from '~/plugins/contentful'
 // function that returns object to avoid shared state
 const state = () => ({
   posts: [],
-  projects: []
+  projects: [],
+  ui: {
+    // whether or not the hero image and header are aligned and fixed
+    // used so user only scrolls once and the state is remembered across app
+    isHeroScrolled: false
+  }
 })
 
 const mutations = {
@@ -16,6 +21,9 @@ const mutations = {
   },
   setProjects(state, projects) {
     state.projects = projects
+  },
+  setHero(state, value) {
+    state.ui.isHeroScrolled = value
   }
 }
 
@@ -39,6 +47,9 @@ const actions = {
       'https://jsonplaceholder.typicode.com/posts'
     )
     commit('setPosts', data)
+  },
+  fixHero({ commit }) {
+    commit('setHero', true)
   }
 }
 
