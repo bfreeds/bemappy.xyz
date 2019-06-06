@@ -1,7 +1,7 @@
 <template>
   <footer>
     <SocialMedia />
-    <p>Copyright Brandyn Friedly 2019</p>
+    <p>Made with Vue and NuxtJS</p>
   </footer>
 </template>
 
