@@ -1,7 +1,7 @@
 <template>
   <header :class="{fixed: isHeroScrolled}">  
     <h1 class="sitename">
-      beMappy.xyz
+      bemappy.xyz
     </h1>  
     <Logo class="logo" />
     <h1 class="title">
@@ -38,13 +38,12 @@ header {
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
-  transition: background-color 1s ease-in;
+  background-color: transparentize($gray0, 0.6);
+  transition: background-color 2s ease-in;
 }
 
 .fixed {
-  // gradient background to balance hero image when aligned
-  // TODO: Animate the gradient & image blur on alignment
-  background-color: transparentize($gray2, 0.6);
+  background-color: transparentize($gray1, 0.6);
 }
 
 h1 {
@@ -53,7 +52,7 @@ h1 {
   word-spacing: 0.7rem;
   letter-spacing: 0.2rem;
   font-weight: 800;
-  // font-variant: small-caps;
+  font-variant: small-caps;
 
   align-self: center;
 }
