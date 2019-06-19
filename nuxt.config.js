@@ -43,7 +43,8 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/google-analytics'
   ],
   styleResources: {
     scss: ['~assets/style/_variables.scss']
@@ -52,6 +53,9 @@ module.exports = {
     preset: 'default',
     linkify: true,
     breaks: true
+  },
+  googleAnalytics: {
+    id: 'UA-142373915-1'
   },
 
   /*
