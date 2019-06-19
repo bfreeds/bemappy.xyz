@@ -44,7 +44,8 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    'ghost-nuxt'
   ],
   styleResources: {
     scss: ['~assets/style/_variables.scss']
@@ -55,7 +56,13 @@ module.exports = {
     breaks: true
   },
   googleAnalytics: {
-    id: 'UA-142373915-1'
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
+  // for development, env variables set with .env file
+  // for prod, env variables set in Netlify app console
+  ghost: {
+    apiUrl: process.env.GHOST_API_URL,
+    contentApiKey: process.env.GHOST_CONTENT_API_KEY
   },
 
   /*
