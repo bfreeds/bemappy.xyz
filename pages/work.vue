@@ -1,9 +1,15 @@
 // work page
 <template>
   <section class="container">
-    <h1 class="title">
-      Work
-    </h1>
+    <header>
+      <h1 class="page-title">
+        work 🛠️
+      </h1>
+      <h3 class="page-subtitle">
+        selected projects, talks, tutorials, etc.
+      </h3>
+    </header>
+
     <article v-if="projects">
       <ul class="content-list">
         <li v-for="(project, index) in projects" :key="index">
@@ -44,9 +50,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
+  max-width: 95vw;
+}
+
+header {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1.5rem;
 }
 
 article {

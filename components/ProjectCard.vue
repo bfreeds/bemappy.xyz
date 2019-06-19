@@ -22,7 +22,7 @@
     <footer class="card-footer">
       <a v-if="projectUrl" :href="projectUrl" class="project-url" target="_blank" rel="noopener noreferrer"><img src="../assets/logos/icons/link.svg" alt="Link Icon" class="icon"></a>
  
-      <h5 class="type">
+      <h5 class="tag">
         {{ type }}
       </h5>
       <a v-if="githubUrl" :href="githubUrl" class="github-url" target="_blank" rel="noopener noreferrer">  <img src="../assets/logos/github.svg" alt="Github Logo" class="icon"></a>
@@ -71,19 +71,21 @@ export default {
 <style lang="scss" scoped>
 .card {
   width: 100%;
-  background-color: transparentize($gray2, 0.7);
+  background-color: transparentize($gray0, 0.7);
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 15px;
-  border: 1px solid $gray1;
-  text-align: center;
+  border: 1px solid $gray2;
+  border-radius: 10px;
 }
 
 .card-lead {
   width: 100%;
-  background-color: $gray4;
+  background-color: $color1;
+  text-align: center;
 }
 
 .card-footer {
@@ -98,29 +100,13 @@ export default {
   color: $gray0;
 }
 .title {
-  font-style: italic;
-  font-size: 1rem;
   font-weight: 400;
-  align-self: right;
-}
-
-.type {
-  font-variant: small-caps;
-  padding: 2px;
-  border-radius: 2px;
-  font-size: 0.8rem;
-  font-weight: 100;
 }
 
 .photo {
   max-width: 100%;
   border: 1px solid $gray2;
   margin-bottom: 5px;
-}
-
-.description {
-  text-align: left;
-  font-size: 1rem;
 }
 
 .icon {

@@ -15,14 +15,13 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  position: relative;
-  max-width: 100%;
-  border: 1px solid $gray1;
+  width: 100%;
+  position: sticky;
+  top: -80px;
   transition: filter 1s ease-out;
 }
 
 .blurred {
-  // TODO: BLUR ANIMATE ON HEADER ALIGNMENT
   filter: blur(2px);
 }
 </style>

@@ -1,26 +1,20 @@
 // default layout
 <template>
   <div class="wrapper">
-    <Header class="header" />
-    <HeroImage class="hero" />
-    <Nav class="nav" />
+    <TheHeader class="header" />
     <nuxt class="content" />
-    <Footer class="footer" />
+    <TheFooter class="footer" />
   </div>
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import HeroImage from '../components/HeroImage.vue'
-import Nav from '~/components/Nav.vue'
-import Footer from '../components/Footer.vue'
+import TheHeader from '../components/TheHeader.vue'
+import TheFooter from '../components/TheFooter.vue'
 
 export default {
   components: {
-    Header,
-    HeroImage,
-    Nav,
-    Footer
+    TheHeader,
+    TheFooter
   }
 }
 </script>
@@ -28,40 +22,35 @@ export default {
 <style lang='scss' scoped>
 /* grid container for the whole page */
 .wrapper {
+  min-height: 100vh;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-areas:
     'header'
-    'hero'
     'nuxt'
-    'nav'
     'footer';
 }
 
 .header {
   grid-area: header;
-}
-.hero {
-  grid-area: hero;
-  position: sticky;
-  top: -100px;
-}
-.nav {
-  grid-area: nav;
+  height: 80px;
 }
 
 /* whichever vue page component is rendered */
 .content {
   grid-area: nuxt;
   width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 1rem;
+  background-color: transparentize($gray0, 0.4);
+  border: 1px solid $gray1;
+  border-radius: 5px;
 }
 
 /* universal footer */
 .footer {
   grid-area: footer;
-  width: 100%;
 }
 
 /* for viewports large enough for two columns */
@@ -70,9 +59,8 @@ export default {
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
       'header  header'
-      'hero    hero'
-      'nav   nuxt'
-      'nav      nuxt'
+      'nuxt   nuxt'
+      'nuxt   nuxt'
       'footer  footer';
   }
 }

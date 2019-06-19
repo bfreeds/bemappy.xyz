@@ -1,14 +1,22 @@
 // page
 <template>
   <section class="container">
-    <div>
-      <h1 class="title">
-        About
+    <header>
+      <h1 class="page-title">
+        about
       </h1>
-    </div>
+    </header>
   </section>
 </template>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+<style lang="scss" scoped>
+.container {
+  max-width: 550px;
+}
+
+header {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
 </style>
