@@ -31,7 +31,7 @@ export default {
   top: 0;
   background-image: url('~assets/photos/hero.jpg');
   background-size: cover; //TODO: fix this so hero scrolls to sticky behind header
-  box-shadow: transparentize($color4, 0.6) 0 0 5px 1.5px;
+  box-shadow: transparentize($color4, 0.3) 0 0 5px 1.5px;
 }
 
 header {
