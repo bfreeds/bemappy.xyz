@@ -2,7 +2,7 @@
 <template>
   <div class="wrapper">
     <TheHeader class="header" />
-    <nuxt class="content" />
+    <nuxt class="main" />
     <TheFooter class="footer" />
   </div>
 </template>
@@ -37,7 +37,7 @@ export default {
 }
 
 /* whichever vue page component is rendered */
-.content {
+.main {
   grid-area: nuxt;
   width: 100%;
   min-height: 100vh;
