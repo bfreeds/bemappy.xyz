@@ -2,7 +2,7 @@
   <article class="post-wrapper">
     <header class="post-header">
       <img src="~assets/photos/sewer_reflection.jpg" alt="example lead art" class="lead-art">
-      <h3 class="series-title">
+      <h3 class="tag">
         Teaching Data Literacy
       </h3>
       <h1 class="title">

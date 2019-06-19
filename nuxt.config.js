@@ -1,8 +1,8 @@
 const pkg = require('./package')
+require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -34,12 +34,18 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~/plugins/contentful'],
 
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources', '@nuxtjs/markdownit'],
+  modules: [
+    '@nuxtjs/dotenv',
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/markdownit',
+    '@nuxtjs/google-analytics'
+  ],
   styleResources: {
     scss: ['~assets/style/_variables.scss']
   },
@@ -47,6 +53,9 @@ module.exports = {
     preset: 'default',
     linkify: true,
     breaks: true
+  },
+  googleAnalytics: {
+    id: 'UA-142373915-1'
   },
 
   /*
@@ -65,6 +74,11 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+
+      // dotenv fs error fix
+      config.node = {
+        fs: 'empty'
       }
     }
   }

@@ -6,7 +6,7 @@
 
 
 # Welcome!
-I'm Brandyn, a geographer who does full stack web development and design with a ❤️ for community and mapping.  
+I'm Brandyn Friedly, a geographer who does full stack web development and design with a ❤️ for community and mapping.  
 
 I also teach, <a target="_blank" rel="noopener noreferrer" href="https://bfreeds.github.io/foss4gna-2018-devops/">speak</a>, and write (portfolio forthcoming on this site-in-progress).
 
@@ -31,22 +31,15 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  max-width: 600px;
   margin: 0 auto;
   padding: 0 30px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
-}
-
-h1 {
-  font-size: 2rem;
-  line-height: 2.6rem;
-  color: $gray6;
-  font-weight: 200;
 }
 
 .photo {
   shape-outside: circle(50%);
   float: right;
+  padding: 5px;
+  margin: 5px;
 }
 </style>

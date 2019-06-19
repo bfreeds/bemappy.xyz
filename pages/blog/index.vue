@@ -2,10 +2,10 @@
 <template>
   <section class="container">
     <header class="blog-header">
-      <h1 class="title">
+      <h1 class="page-title">
         mappenings 'n things
       </h1>
-      <h3 class="subtitle">
+      <h3 class="page-subtitle">
         writing, code, cartography, etc.
       </h3>
     </header>
@@ -28,14 +28,14 @@ export default {
     }
   },
   async fetch({ store, params }) {
-    await store.dispatch('setPosts', params.slug)
+    await store.dispatch('setPosts')
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .container {
-  max-width: 450px;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -44,17 +44,8 @@ export default {
 
 .blog-header {
   margin: 0 auto;
-  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
   color: $gray5;
-}
-.title {
-  font-weight: 100;
-  font-size: 1.5rem;
-}
-.subtitle {
-  font-weight: 100;
-  font-size: 1rem;
-  font-style: italic;
 }
 
 .link {
