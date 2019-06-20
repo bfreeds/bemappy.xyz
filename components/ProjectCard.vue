@@ -16,6 +16,7 @@
     <section class="card-body">
       <img v-if="photo" :src="photoUrl" alt="" class="photo">
       <!-- description logic -->
+      <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-if="description" class="description" v-html="descriptionHtml" />
     </section>
 
