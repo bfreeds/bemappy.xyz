@@ -13,7 +13,7 @@
     </div>
     <ul>
       <li v-for="(post, index) in posts" :key="index" class="link">
-        <NuxtLink :to="$route.path + '/' + post.id.toString()">
+        <NuxtLink :to="$route.path + '/' + post.slug">
           {{ post.title }}
         </NuxtLink>
       </li>
