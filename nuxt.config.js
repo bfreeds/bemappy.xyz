@@ -44,8 +44,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit',
-    '@nuxtjs/google-analytics',
-    'ghost-nuxt'
+    '@nuxtjs/google-analytics'
   ],
   styleResources: {
     scss: ['~assets/style/_variables.scss']
