@@ -1,3 +1,5 @@
+// page for individual blog post
+
 <template>
   <article class="post-wrapper">
     <header class="post-header">

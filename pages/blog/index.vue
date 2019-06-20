@@ -1,4 +1,5 @@
 // blog home page
+
 <template>
   <section class="container">
     <header class="blog-header">
@@ -26,9 +27,6 @@ export default {
     posts() {
       return this.$store.state.posts
     }
-  },
-  async fetch({ store, params }) {
-    await store.dispatch('setPosts')
   }
 }
 </script>

@@ -46,6 +46,9 @@ const actions = {
     const posts = await ghostClient.posts
       .browse({ include: 'tags,authors' })
       .then(posts => posts)
+      .catch(err => {
+        throw err
+      })
 
     // commit posts to global store
     commit('setPosts', posts)
