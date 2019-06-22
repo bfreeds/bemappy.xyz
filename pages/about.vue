@@ -7,7 +7,7 @@
   
   ##  How I Work  
   ### Collaborating 🤝
-  Though I work independently, I love working on great teams with a shared purpose - because we can go further together.  I take a lot of pride in being a great collaborator, by communicating clearly and empowering others to do great work.  
+ I love working on great teams with a shared purpose - because we can go further together.  I take a lot of pride in being a great collaborator, by communicating clearly and empowering others to do great work.  
   
   Feeback from colleagues that have meant the most to me are that I'm a great teacher and that they appreciate how I comment code.
   
