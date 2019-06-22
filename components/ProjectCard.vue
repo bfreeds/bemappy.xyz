@@ -21,12 +21,12 @@
     </section>
 
     <footer class="card-footer">
-      <a v-if="projectUrl" :href="projectUrl" class="project-url" target="_blank" rel="noopener noreferrer"><img src="../assets/logos/icons/link.svg" alt="Link Icon" class="icon"></a>
+      <a v-if="projectUrl" :href="projectUrl" class="project-url" target="_blank" rel="noopener noreferrer"><font-awesome :icon="['fas', 'link']" /></a>
  
       <h5 class="tag">
         {{ type }}
       </h5>
-      <a v-if="githubUrl" :href="githubUrl" class="github-url" target="_blank" rel="noopener noreferrer">  <img src="../assets/logos/github.svg" alt="Github Logo" class="icon"></a>
+      <a v-if="githubUrl" :href="githubUrl" class="github-url" target="_blank" rel="noopener noreferrer"><font-awesome :icon="['fab', 'github']" /></a>
     </footer>
   </div>
 </template>

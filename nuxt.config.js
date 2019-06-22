@@ -45,8 +45,22 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    'nuxt-fontawesome' // unofficial pkg bc official lacks documentation
   ],
+  fontawesome: {
+    component: 'font-awesome', // sets component name
+    imports: [
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      }
+    ]
+  },
   styleResources: {
     scss: ['~assets/style/_variables.scss']
   },
