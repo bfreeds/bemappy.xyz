@@ -47,9 +47,11 @@ a:hover {
   background-color: $color1;
 }
 
-.caption {
-  font-size: .8rem;
+
+.caption, figcaption {
+  font-size: .6rem;
   font-variant: small-caps;
+  padding-bottom: 1rem;
 }
 
 // Blockquotes
@@ -80,4 +82,8 @@ blockquote {
   font-weight: 100;
   font-size: 1rem;
   font-style: italic;
+}
+
+img {
+  max-width: 100%;
 }
