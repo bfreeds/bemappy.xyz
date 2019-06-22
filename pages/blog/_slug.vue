@@ -2,16 +2,6 @@
 
 <template>
   <article class="post-wrapper">
-    <header class="post-header">
-      <img src="~assets/photos/sewer_reflection.jpg" alt="example lead art" class="lead-art">
-      <h3 class="tag">
-        Teaching Data Literacy
-      </h3>
-      <h3 class="date">
-        July 19th, 2019
-      </h3>
-    </header>
-    <section class="post-wrap" />
     <GhostPost :post="post" />
   </article>
 </template>
@@ -37,7 +27,10 @@ export default {
     console.log('params', params.slug)
 
     // We can use async/await ES6 feature
-    const post = await ghostClient.posts.read({ slug: params.slug })
+    const post = await ghostClient.posts.read({
+      slug: params.slug,
+      include: 'tags, authors'
+    })
 
     return { post: post }
   }
@@ -46,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 article {
-  max-width: 500px;
+  max-width: 600px;
   padding: 10px;
 }
 
