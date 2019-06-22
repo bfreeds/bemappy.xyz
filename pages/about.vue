@@ -45,7 +45,7 @@
 
 <style lang="scss" scoped>
 .main {
-  max-width: 550px;
+  max-width: 600px;
 }
 .lede-img {
   width: 100%;
