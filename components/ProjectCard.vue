@@ -83,6 +83,13 @@ export default {
   border-radius: 10px;
 }
 
+.card:hover {
+  box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07),
+    1px 6px 12px rgba(39, 44, 49, 0.04);
+  transition: all 0.4s ease;
+  transform: translate3D(0, -1px, 0) scale(1.02);
+}
+
 .card-lead {
   width: 100%;
   background-color: $color1;
