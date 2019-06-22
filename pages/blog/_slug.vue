@@ -7,35 +7,41 @@
       <h3 class="tag">
         Teaching Data Literacy
       </h3>
-      <h1 class="title">
-        {{ post.title }}
-      </h1>
       <h3 class="date">
         July 19th, 2019
       </h3>
     </header>
-    <section class="post-wrap">
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-      <p>{{ post.body }}</p>
-    </section>
+    <section class="post-wrap" />
+    <GhostPost :post="post" />
   </article>
 </template>
 
 <script>
-export default {}
+import GhostPost from '~/components/GhostPost.vue'
+import ghostClient from '~/plugins/ghost'
+
+export default {
+  components: {
+    GhostPost
+  },
+
+  // return asyncData from function so that content is unique per component, rather than shared.
+  data() {
+    return this.post
+  },
+
+  /** *  this is called in the browser - not when statically generated.
+   see this discussion and look for Nuxt feature update for 100% static:  https://github.com/nuxt/nuxt.js/issues/1949  ***/
+  async asyncData({ params }) {
+    // eslint-disable-next-line no-console
+    console.log('params', params.slug)
+
+    // We can use async/await ES6 feature
+    const post = await ghostClient.posts.read({ slug: params.slug })
+
+    return { post: post }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
