@@ -37,7 +37,6 @@ export default {
 }
 
 .photo {
-  shape-outside: circle(50%);
   float: right;
   padding: 5px;
   margin: 5px;
