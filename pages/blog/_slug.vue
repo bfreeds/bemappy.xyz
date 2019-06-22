@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import GhostPost from '~/components/GhostPost.vue'
+import GhostPost from '~/components/Ghost/GhostPost.vue'
 import ghostClient from '~/plugins/ghost'
 
 export default {
