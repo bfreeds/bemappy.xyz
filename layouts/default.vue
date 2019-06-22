@@ -33,6 +33,7 @@ export default {
 
 .header {
   grid-area: header;
+  z-index: 100;
   height: 80px;
 }
 

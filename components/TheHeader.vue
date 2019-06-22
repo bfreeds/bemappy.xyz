@@ -36,7 +36,6 @@ export default {
 
 header {
   height: 80px;
-  z-index: 10;
   width: 100%;
   display: flex;
   align-items: center;
