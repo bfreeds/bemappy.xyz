@@ -1,7 +1,9 @@
 <template>
   <article class="post">
     <header class="opener">
-      <figure />
+      <figure class="lede-figure">
+        <img :src="post.feature_image" alt="">
+      </figure>
       <h1 class="title">
         {{ post.title }}
       </h1>
@@ -27,12 +29,18 @@ export default {
   computed: {
     readingTime: function() {
       return this.calculateReadingTime(this.post)
+    },
+    // filter out hidden tags
+    publicTags: function() {
+      return this.post.tags.filter(function(tag) {
+        return tag.visibility === 'public'
+      })
     }
   },
   methods: {
     calculateReadingTime: function(post) {
       return readingTime(post, {
-        minute: 'One minute read',
+        minute: '1 minute read',
         minutes: '% minute read'
       })
     }
@@ -40,5 +48,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+header {
+  padding-bottom: 2rem;
+  border: 1px solid black;
+}
+.lede-figure {
+  width: 100%;
+}
 </style>
