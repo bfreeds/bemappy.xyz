@@ -28,7 +28,7 @@
   If it sounds like I might be someone you'd like to work with, please reach out!
 
   ## How I Play 🏕️
-  When I'm not working, I'm reading (especially classics and Russian lit), exploring the city and hinterlands by bike, community organizing, and doing pottery.  
+  When I'm not working, I'm reading (especially classics and Russian lit), exploring the city and hinterlands by bike and/or train, community organizing, and doing pottery.  
 
     Some of my favorite books include:  
   - [*The Brothers Karamazov*](https://en.wikipedia.org/wiki/The_Brothers_Karamazov), by Fyodor Dostoeyvski
@@ -39,7 +39,7 @@
   - [*Thought and Language*](https://en.wikipedia.org/wiki/Lev_Vygotsky#Thinking_and_speech), by Lev Vygotsky  
   
 
-  I also love nature, especially forests with ferns, mosses, rivers, and good rocks.  I'm passionate about mythology, history, geography, and storytelling through all kinds of mediums - data, clay, poetry, visual art, experience design, etc.  
+  I also love nature, especially forests with ferns, mosses, rivers, and good rocks.  I'm passionate about mythology, history, geography, and storytelling through all kinds of mediums - data, clay, poetry, visual art, experience design.
   
 </template>
 
