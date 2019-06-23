@@ -36,7 +36,7 @@ footer {
   justify-content: space-around;
 }
 
-.fa-icon:hover path {
-  fill: $accent-color;
+a:hover path {
+  color: $accent-color;
 }
 </style>
