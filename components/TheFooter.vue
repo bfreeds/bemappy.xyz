@@ -3,14 +3,14 @@
     <p>Made with Vue and NuxtJS</p>
     <div class="profile-buttons">
       <!-- twitter -->
-      <a href="https://twitter.com/brandynfriedly">      <font-awesome :icon="['fab', 'twitter']" /></a>
+      <a href="https://twitter.com/brandynfriedly"><font-awesome :icon="['fab', 'twitter']" class="fa-icon" /></a>
       <!-- github -->
-      <a href="https://github.com/bfreeds"><font-awesome :icon="['fab', 'github']" /></a>
+      <a href="https://github.com/bfreeds"><font-awesome :icon="['fab', 'github']" class="fa-icon" /></a>
       <!-- linkedin -->
-      <a href="https://www.linkedin.com/in/brandyn-friedly-2b154b187/">    <font-awesome :icon="['fab', 'linkedin']" /></a>
+      <a href="https://www.linkedin.com/in/brandyn-friedly-2b154b187/">    <font-awesome :icon="['fab', 'linkedin']" class="fa-icon" /></a>
 
       <!-- instagram -->
-      <a href="https://www.instagram.com/brandyn.friedly/">      <font-awesome :icon="['fab', 'instagram']" /></a>
+      <a href="https://www.instagram.com/brandyn.friedly/">      <font-awesome :icon="['fab', 'instagram']" class="fa-icon" /></a>
     </div>
   </footer>
 </template>
@@ -34,5 +34,9 @@ footer {
   max-width: 200px;
   display: flex;
   justify-content: space-around;
+}
+
+.fa-icon:hover path {
+  fill: $accent-color;
 }
 </style>
