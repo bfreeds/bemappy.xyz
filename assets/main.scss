@@ -48,6 +48,10 @@ a:hover {
   transition: all 0.2s ease;
 }
 
+// for font awesome icons
+a:hover path {
+  color: $accent-color;
+}
 
 .caption, figcaption {
   font-size: .6rem;
@@ -65,6 +69,14 @@ blockquote {
   font-style: italic;
 }
 
+ul {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  list-style: circle;
+}
 .tag {
   font-size: 0.8rem;
   font-variant: small-caps;
