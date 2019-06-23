@@ -73,4 +73,8 @@ article {
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   grid-gap: 2rem;
 }
+
+.content-list li {
+  list-style: none;
+}
 </style>
