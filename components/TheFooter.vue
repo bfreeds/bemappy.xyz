@@ -12,6 +12,14 @@
     </div>
 
     <p>Made with Vue and NuxtJS</p>
+    <div class="license">
+      <p>
+        Copyright (c) 2019 Brandyn Friedly 
+        <a href="https://github.com/bfreeds/bemappy.xyz">
+          <font-awesome :icon="['fab', 'github']" class="fa-icon" />
+        </a>  MIT License
+      </p>
+    </div>
   </footer>
 </template>
 
@@ -26,17 +34,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .profile-buttons {
+  margin-top: 1rem;
   width: 50%;
   max-width: 200px;
   display: flex;
   justify-content: space-around;
 }
 
-a:hover path {
-  color: $accent-color;
+.license p {
+  font-size: 0.7rem;
+  font-variant: small-caps;
 }
 </style>
