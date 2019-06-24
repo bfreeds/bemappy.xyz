@@ -43,8 +43,6 @@ export default {
   },
   // Computed works when the fetch method is on *this* page.  Is not working when the store is just hydrated from the getProjects action being dispatched on the home page.
   async fetch({ store, params }) {
-    // eslint-disable-next-line no-console
-    console.log('async fetch on portfolio page executed')
     await store.dispatch('getProjects')
   }
 }
@@ -74,5 +72,9 @@ article {
   /* pattern learned from Rachel Andrews */
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   grid-gap: 2rem;
+}
+
+.content-list li {
+  list-style: none;
 }
 </style>

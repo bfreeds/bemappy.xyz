@@ -45,11 +45,18 @@ a {
 a:hover {
   color: $accent-color;
   background-color: $color1;
+  transition: all 0.2s ease;
 }
 
-.caption {
-  font-size: .8rem;
+// for font awesome icons
+a:hover path {
+  color: $accent-color;
+}
+
+.caption, figcaption {
+  font-size: .6rem;
   font-variant: small-caps;
+  padding-bottom: 1rem;
 }
 
 // Blockquotes
@@ -62,6 +69,14 @@ blockquote {
   font-style: italic;
 }
 
+ul {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  list-style: circle;
+}
 .tag {
   font-size: 0.8rem;
   font-variant: small-caps;
@@ -80,4 +95,8 @@ blockquote {
   font-weight: 100;
   font-size: 1rem;
   font-style: italic;
+}
+
+img {
+  max-width: 100%;
 }

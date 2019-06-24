@@ -28,6 +28,7 @@
 <style scoped>
 nav ul {
   display: flex;
+  margin: 0;
   justify-content: space-around;
   align-items: center;
 }

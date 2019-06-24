@@ -1,6 +1,6 @@
 // Vuex Store
-import axios from 'axios'
 import client from '~/plugins/contentful'
+import ghostClient from '~/plugins/ghost'
 
 // default Vuex store
 
@@ -31,8 +31,6 @@ const mutations = {
 const actions = {
   // dispatched on home page
   async getProjects({ commit }) {
-    // eslint-disable-next-line no-console
-    console.log('getProjects EXECUTED')
     const response = await client.getEntries({
       content_type: 'project'
     })
@@ -41,12 +39,19 @@ const actions = {
       commit('setProjects', response.items)
     }
   },
+
   // dispatched on server initialization
   async nuxtServerInit({ commit }) {
-    const { data } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
-    commit('setPosts', data)
+    // fetch posts from ghost
+    const posts = await ghostClient.posts
+      .browse({ include: 'tags,authors' })
+      .then(posts => posts)
+      .catch(err => {
+        throw err
+      })
+
+    // commit posts to global store
+    commit('setPosts', posts)
   },
   fixHero({ commit }) {
     commit('setHero', true)

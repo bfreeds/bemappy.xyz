@@ -1,6 +1,6 @@
 // default layout
 <template>
-  <div class="wrapper">
+  <div class="page-wrapper">
     <TheHeader class="header" />
     <nuxt class="main" />
     <TheFooter class="footer" />
@@ -21,10 +21,10 @@ export default {
 
 <style lang='scss' scoped>
 /* grid container for the whole page */
-.wrapper {
+.page-wrapper {
   min-height: 100vh;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-areas:
     'header'
     'nuxt'
@@ -33,6 +33,7 @@ export default {
 
 .header {
   grid-area: header;
+  z-index: 100;
   height: 80px;
 }
 
@@ -40,17 +41,15 @@ export default {
 .main {
   grid-area: nuxt;
   width: 100%;
-  min-height: 100vh;
   margin: 0 auto;
   padding: 1rem;
-  background-color: transparentize($gray0, 0.4);
-  border: 1px solid $gray1;
-  border-radius: 5px;
 }
 
 /* universal footer */
 .footer {
   grid-area: footer;
+  height: 30vh;
+  min-height: 200px;
 }
 
 /* for viewports large enough for two columns */

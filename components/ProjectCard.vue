@@ -16,16 +16,17 @@
     <section class="card-body">
       <img v-if="photo" :src="photoUrl" alt="" class="photo">
       <!-- description logic -->
+      <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-if="description" class="description" v-html="descriptionHtml" />
     </section>
 
     <footer class="card-footer">
-      <a v-if="projectUrl" :href="projectUrl" class="project-url" target="_blank" rel="noopener noreferrer"><img src="../assets/logos/icons/link.svg" alt="Link Icon" class="icon"></a>
+      <a v-if="projectUrl" :href="projectUrl" class="project-url" target="_blank" rel="noopener noreferrer"><font-awesome :icon="['fas', 'link']" /></a>
  
       <h5 class="tag">
         {{ type }}
       </h5>
-      <a v-if="githubUrl" :href="githubUrl" class="github-url" target="_blank" rel="noopener noreferrer">  <img src="../assets/logos/github.svg" alt="Github Logo" class="icon"></a>
+      <a v-if="githubUrl" :href="githubUrl" class="github-url" target="_blank" rel="noopener noreferrer"><font-awesome :icon="['fab', 'github']" /></a>
     </footer>
   </div>
 </template>
@@ -80,6 +81,13 @@ export default {
   padding: 15px;
   border: 1px solid $gray2;
   border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07),
+    1px 6px 12px rgba(39, 44, 49, 0.04);
+  transition: all 0.4s ease;
+  transform: translate3D(0, -1px, 0) scale(1.02);
 }
 
 .card-lead {
