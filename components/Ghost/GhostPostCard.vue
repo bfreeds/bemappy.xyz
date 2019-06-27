@@ -1,10 +1,26 @@
 <template>
   <article class="post-card">
-    <h3>{{ post.title }}</h3>
-    <img :src="post.feature_image" alt="">
-    <p class="reading-time">
-      {{ readingTime }}
-    </p>
+    <img class="figure" :src="post.feature_image" alt="">
+    <div class="post-card-content">
+      <header>
+        <p class="primary-tag tag">
+          {{ post.primary_tag.name }}
+        </p>
+        <h2 class="title">
+          {{ post.title }}
+        </h2>
+      </header>
+    </div>
+
+    <section class="post-card-excerpt">
+      {{ post.excerpt }}
+    </section>
+
+    <footer class="post-card-meta">
+      <p class="reading-time">
+        {{ readingTime }}
+      </p>
+    </footer>
   </article>
 </template>
 
@@ -41,11 +57,23 @@ export default {
 .post-card {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  margin: 1rem;
+  margin: 0 20px 5vw;
   background-color: transparentize($gray0, 0.7);
+  border-radius: 5px;
+}
+.figure {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
+.title {
+  font-weight: 600;
+}
 .post-card:hover {
   box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07),
     1px 6px 12px rgba(39, 44, 49, 0.04);
