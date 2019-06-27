@@ -1,0 +1,78 @@
+// typography
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
+
+// $primary-font: 'Crimson Text', sans-serif;
+$primary-font: 'Crimson Text, serif';
+
+ // typography
+ $base-font-size: 16px;
+ $font-small: .8rem;
+ $font-large: 1.8rem;
+
+ /* for viewports large enough for two columns */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     margin-top: 0;
+     line-height: 1.15;
+     font-weight: 700;
+     text-rendering: optimizeLegibility;
+ }
+ 
+ h1 {
+     margin: 0 0 0.5em 0;
+     font-size: 5rem;
+     font-weight: 700;
+ }
+ @media (max-width: 500px) {
+     h1 {
+         font-size: 2.2rem;
+     }
+ }
+ 
+ h2 {
+     margin: 1.5em 0 0.5em 0;
+     font-size: 2rem;
+ }
+ @media (max-width: 500px) {
+     h2 {
+         font-size: 1.8rem;
+     }
+ }
+ 
+ h3 {
+     margin: 1.5em 0 0.5em 0;
+     font-size: 1.8rem;
+     font-weight: 500;
+ }
+ @media (max-width: 500px) {
+     h3 {
+         font-size: 1.7rem;
+     }
+ }
+ 
+ h4 {
+     margin: 1.5em 0 0.5em 0;
+     font-size: 1.6rem;
+     font-weight: 500;
+ }
+ 
+ h5 {
+     margin: 1.5em 0 0.5em 0;
+     font-size: 1.4rem;
+     font-weight: 500;
+ }
+ 
+ h6 {
+     margin: 1.5em 0 0.5em 0;
+     font-size: 1.4rem;
+     font-weight: 500;
+ }
+
+ ::selection {
+  color: $accent-color;
+  background-color: $color1;
+}
