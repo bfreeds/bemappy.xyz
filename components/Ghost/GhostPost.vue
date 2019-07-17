@@ -7,6 +7,9 @@
       <h1 class="title">
         {{ post.title }}
       </h1>
+      <div class="share-buttons">
+        <font-awesome :icon="['fab', 'twitter']" />
+      </div>
       <span class="read-time">
         {{ readingTime }}
       </span>
@@ -51,7 +54,6 @@ export default {
 <style lang="scss" scoped>
 header {
   padding-bottom: 2rem;
-  border: 1px solid black;
 }
 .lede-figure {
   width: 100%;

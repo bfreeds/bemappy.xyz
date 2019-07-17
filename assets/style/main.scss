@@ -1,11 +1,5 @@
-@import "style/variables";
-
-// typography
-// note:  had to move this from _variables because of a strange webpack loader issue when importing from that file
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
-
-// $primary-font: 'Crimson Text', sans-serif;
-$primary-font: 'Crimson Text, serif';
+@import "variables";
+@import "type";
 
 * {
   margin: 0;
@@ -20,21 +14,8 @@ html {
   background-color: $bg-color;
 }
 // Base Styles for Elements
-// Primary Headers
-h1 {
-  font-size: 2.25rem;
-}
-// Main body text
-p {
-  font-size: 1rem;
-  line-height: 150%;
-  padding-bottom: 2rem;
-}
 
-::selection {
-  color: $accent-color;
-  background-color: $color1;
-}
+// Main body text
 
 // Links
 a {
@@ -77,14 +58,13 @@ ul {
 li {
   list-style: circle;
 }
+
 .tag {
   font-size: 0.8rem;
   font-variant: small-caps;
-  font-weight: 200;
-  background-color: $color4;
-  color: $gray0;
+  font-weight: 100;
+  color: $color1;
   padding: 2px;
-  border-radius: 3px;
 }
 
 .page-title {
